@@ -1,11 +1,10 @@
-/** @type {import('next').NextConfig} */
+import createNextIntlPlugin from 'next-intl/plugin';
+
+// 預設會找 ./i18n/request.(ts|js)，我們就用預設即可
+const withNextIntl = createNextIntlPlugin();
+
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'i.ytimg.com' },
-      { protocol: 'https', hostname: 'img.youtube.com' },
-      { protocol: 'https', hostname: 'images.unsplash.com' }
-    ]
-  }
-}
-export default nextConfig
+  reactStrictMode: false
+};
+
+export default withNextIntl(nextConfig);
