@@ -1,34 +1,50 @@
 {
-  "app": {
-    "title": "Vital Vibe",
-    "dashboard": "主控台",
-    "logMeal": "記一餐",
-    "logWorkout": "記運動",
-    "videos": "運動影片庫",
-    "recipes": "食譜庫",
-    "profile": "用戶資料",
+  "Nav": {
+    "dashboard": "儀表板",
+    "logMeal": "記錄餐點",
+    "logWorkout": "記錄運動",
+    "library": "收藏庫",
+    "videos": "影片",
+    "recipes": "食譜",
+    "profile": "個人資料",
     "signIn": "登入",
-    "signOut": "登出",
-    "today": "今日",
+    "signOut": "登出"
+  },
+  "Dashboard": {
+    "title": "Vital Vibe",
     "intake": "攝取",
     "burned": "消耗",
-    "remaining": "剩餘",
-    "analyzePhoto": "相機/相片分析",
-    "aiEstimate": "AI 估算",
-    "save": "儲存",
-    "name": "食物名稱",
-    "quantity": "份量",
-    "unit": "單位",
+    "remaining": "剩餘"
+  },
+  "LogMeal": {
+    "title": "記錄餐點",
+    "foodName": "食物名稱",
+    "serving": "份量",
     "calories": "卡路里",
-    "avgHr": "平均心跳（可選）",
-    "durationMin": "時長（分鐘）",
+    "analyzeImage": "相片分析",
+    "aiEstimate": "AI 估算",
+    "save": "儲存"
+  },
+  "LogWorkout": {
+    "title": "記錄運動",
     "type": "運動類型",
-    "custom": "自訂",
-    "upload": "上載",
-    "youtubeUrl": "YouTube 連結",
-    "tags": "標籤（以逗號分隔）",
-    "language": "語言",
-    "darkMode": "深色",
-    "remainingCenter": "剩餘"
+    "duration": "時長（分鐘）",
+    "avgHr": "平均心跳",
+    "calories": "卡路里",
+    "save": "儲存"
+  },
+  "Library": {
+    "title": "收藏庫",
+    "addLink": "新增連結",
+    "tags": "標籤"
+  },
+  "Profile": {
+    "title": "個人資料",
+    "age": "年齡",
+    "height": "身高（cm）",
+    "weight": "體重（kg）",
+    "sex": "性別",
+    "goal": "目標",
+    "tdee": "每日目標"
   }
 }
