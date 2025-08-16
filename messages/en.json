@@ -1,34 +1,50 @@
 {
-  "app": {
-    "title": "Vital Vibe",
+  "Nav": {
     "dashboard": "Dashboard",
-    "logMeal": "Log Meal",
-    "logWorkout": "Log Workout",
+    "logMeal": "Log meal",
+    "logWorkout": "Log workout",
+    "library": "Library",
     "videos": "Videos",
     "recipes": "Recipes",
     "profile": "Profile",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "today": "Today",
+    "signIn": "Sign in",
+    "signOut": "Sign out"
+  },
+  "Dashboard": {
+    "title": "Vital Vibe",
     "intake": "Intake",
     "burned": "Burned",
-    "remaining": "Remaining",
-    "analyzePhoto": "Analyze Photo",
-    "aiEstimate": "AI Estimate",
-    "save": "Save",
-    "name": "Name",
-    "quantity": "Quantity",
-    "unit": "Unit",
+    "remaining": "Remaining"
+  },
+  "LogMeal": {
+    "title": "Log meal",
+    "foodName": "Food name",
+    "serving": "Serving",
     "calories": "Calories",
-    "avgHr": "Avg HR (optional)",
-    "durationMin": "Duration (min)",
+    "analyzeImage": "Analyze photo",
+    "aiEstimate": "AI estimate",
+    "save": "Save"
+  },
+  "LogWorkout": {
+    "title": "Log workout",
     "type": "Type",
-    "custom": "Custom",
-    "upload": "Upload",
-    "youtubeUrl": "YouTube URL",
-    "tags": "Tags (comma-separated)",
-    "language": "Language",
-    "darkMode": "Dark",
-    "remainingCenter": "Remaining"
+    "duration": "Duration (min)",
+    "avgHr": "Avg HR",
+    "calories": "Calories",
+    "save": "Save"
+  },
+  "Library": {
+    "title": "Library",
+    "addLink": "Add link",
+    "tags": "Tags"
+  },
+  "Profile": {
+    "title": "Profile",
+    "age": "Age",
+    "height": "Height (cm)",
+    "weight": "Weight (kg)",
+    "sex": "Sex",
+    "goal": "Goal",
+    "tdee": "Daily target"
   }
 }
