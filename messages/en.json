@@ -1,4 +1,43 @@
 {
+  "Common": {
+    "appName": "Vital Vibe",
+    "save": "Save",
+    "saved": "Saved",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "retry": "Retry",
+    "optional": "Optional",
+    "loading": "Loading...",
+    "success": "Success",
+    "failed": "Failed",
+    "upload": "Upload",
+    "or": "or",
+    "search": "Search",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This week",
+    "unit_kcal": "kcal",
+    "unit_min": "min",
+    "unit_cm": "cm",
+    "unit_kg": "kg",
+    "unit_bpm": "bpm",
+    "yes": "Yes",
+    "no": "No",
+    "copied": "Copied"
+  },
+  "Errors": {
+    "required": "This field is required",
+    "invalidUrl": "Invalid URL",
+    "fetchFailed": "Failed to fetch data",
+    "permissionDenied": "Permission denied",
+    "notAuthenticated": "Please sign in to continue",
+    "unknown": "Something went wrong"
+  },
   "Nav": {
     "dashboard": "Dashboard",
     "logMeal": "Log meal",
@@ -8,35 +47,89 @@
     "recipes": "Recipes",
     "profile": "Profile",
     "signIn": "Sign in",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "settings": "Settings"
   },
   "Dashboard": {
     "title": "Vital Vibe",
     "intake": "Intake",
     "burned": "Burned",
-    "remaining": "Remaining"
+    "remaining": "Remaining",
+    "dailyTarget": "Daily target",
+    "overview": "Overview",
+    "streak": "Streak",
+    "viewDetails": "View details",
+    "addMeal": "Add meal",
+    "addWorkout": "Add workout",
+    "pieLegendConsumed": "Consumed",
+    "pieLegendBurned": "Burned",
+    "pieLegendRemaining": "Remaining",
+    "last30days": "Last 30 days"
+  },
+  "Auth": {
+    "signInTitle": "Sign in",
+    "signUpTitle": "Create account",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "ctaSignIn": "Sign in",
+    "ctaSignUp": "Sign up",
+    "noAccount": "Don’t have an account?",
+    "haveAccount": "Already have an account?",
+    "signOut": "Sign out"
   },
   "LogMeal": {
     "title": "Log meal",
     "foodName": "Food name",
     "serving": "Serving",
     "calories": "Calories",
+    "time": "Time",
+    "notes": "Notes",
+    "addItem": "Add item",
+    "removeItem": "Remove",
     "analyzeImage": "Analyze photo",
-    "aiEstimate": "AI estimate",
-    "save": "Save"
+    "analyzeFromCamera": "Use camera",
+    "aiEstimateCalories": "AI estimate (kcal)",
+    "aiEstimateServing": "AI estimate (serving)",
+    "scanBarcode": "Scan barcode",
+    "imageHint": "Upload a meal photo (optional)",
+    "saveMeal": "Save meal",
+    "savedMeal": "Meal saved"
   },
   "LogWorkout": {
     "title": "Log workout",
     "type": "Type",
+    "intensity": "Intensity",
     "duration": "Duration (min)",
     "avgHr": "Avg HR",
+    "met": "MET",
     "calories": "Calories",
-    "save": "Save"
+    "time": "Time",
+    "aiEstimate": "AI estimate",
+    "analyzeWatchPhoto": "Analyze watch screenshot",
+    "saveWorkout": "Save workout",
+    "savedWorkout": "Workout saved"
   },
   "Library": {
     "title": "Library",
+    "videosTab": "Videos",
+    "recipesTab": "Recipes",
     "addLink": "Add link",
-    "tags": "Tags"
+    "url": "Link URL",
+    "titleField": "Title",
+    "description": "Description",
+    "tags": "Tags",
+    "thumbnail": "Thumbnail",
+    "fetchPreview": "Fetch preview",
+    "saveItem": "Save",
+    "editItem": "Edit",
+    "deleteItem": "Delete",
+    "empty": "No items yet",
+    "created": "Saved to library"
+  },
+  "Recipes": {
+    "perServingCalories": "Per serving calories",
+    "addRecipe": "Add recipe"
   },
   "Profile": {
     "title": "Profile",
@@ -44,7 +137,23 @@
     "height": "Height (cm)",
     "weight": "Weight (kg)",
     "sex": "Sex",
+    "sex_male": "Male",
+    "sex_female": "Female",
     "goal": "Goal",
-    "tdee": "Daily target"
+    "goal_maintain": "Maintain",
+    "goal_loss": "Fat loss",
+    "goal_gain": "Muscle gain",
+    "tdee": "Daily target (kcal)",
+    "dailyIntakeTarget": "Target intake (kcal)",
+    "dailyBurnTarget": "Target burn (kcal)",
+    "language": "Language",
+    "theme": "Theme",
+    "saveProfile": "Save profile",
+    "savedProfile": "Profile saved"
+  },
+  "Camera": {
+    "pickOrDrop": "Upload or drag & drop image",
+    "takePhoto": "Take photo",
+    "processing": "Analyzing image..."
   }
 }
