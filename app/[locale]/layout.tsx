@@ -1,5 +1,5 @@
 // app/[locale]/layout.tsx
-import './globals.css';
+import '../globals.css'; // ← 修正路徑（上一層）
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
@@ -19,7 +19,6 @@ export default async function RootLayout({
 }) {
   const {locale} = params;
 
-  // 驗證 locale
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
@@ -29,7 +28,6 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className="min-h-screen flex bg-background text-foreground">
-        {/* 桌機：左側導航；手機：底部導航 */}
         <SideNav className="hidden md:block" />
         <div className="flex-1 flex flex-col">
           <Header />
