@@ -1,17 +1,20 @@
-// i18n.ts（放在專案根目錄）
-// 提供 Server Components 用的多語設定，讓 next-intl 的 plugin 能確實找到。
-import {getRequestConfig} from 'next-intl/server';
-import {hasLocale} from 'next-intl';
-import {routing} from './src/i18n/routing';
+import {defineConfig, getRequestConfig} from 'next-intl/server';
 
-export default getRequestConfig(async ({requestLocale}) => {
-  const requested = await requestLocale;
-  const locale = hasLocale(routing.locales, requested)
-    ? (requested as string)
-    : routing.defaultLocale;
-
+export default getRequestConfig(async ({locale}) => {
+  // 動態載入 TS 模組，避免 JSON 解析問題
+  const messages = (await import(`./messages/${locale}.ts`)).default;
   return {
     locale,
-    messages: (await import(`./messages/${locale}.json`)).default
+    messages
   };
 });
+
+export const locales = ['en', 'zh-Hant'] as const;
+export const defaultLocale = 'zh-Hant';
+
+export const routing = defineConfig({
+  locales,
+  defaultLocale,
+  localePrefix: 'as-needed'
+});
+
