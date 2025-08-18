@@ -162,4 +162,45 @@ export function getMetValue(
 ): number {
   const item = MET_TABLE[type];
   if (!item) return 4.0; // 安全預設
-  if (intensity && item.in
+  if (intensity && item.intensityMet?.[intensity]) {
+    return item.intensityMet[intensity]!;
+  }
+  return item.met ?? item.intensityMet?.moderate ?? 4.0;
+}
+
+/**
+ * 卡路里估算（ACSM 標準公式）
+ * kcal = MET × 3.5 × 體重(kg) / 200 × 時長(分鐘)
+ */
+export function estimateCaloriesByMET(params: {
+  type: ActivityKey;
+  weightKg: number;
+  durationMin: number;
+  intensity?: Intensity;
+  avgHr?: number; // 非必要；若提供，可做微幅加權
+}): number {
+  const { type, weightKg, durationMin, intensity, avgHr } = params;
+  let met = getMetValue(type, intensity);
+
+  // 若有心跳，對 MET 做 5~10% 的微調（很保守），避免誤導
+  if (avgHr && Number.isFinite(avgHr)) {
+    // 以 120bpm 當作中強度的中位數，做線性微調（±10% 封頂）
+    const delta = Math.max(-0.1, Math.min(0.1, (avgHr - 120) / 120 / 2));
+    met = met * (1 + delta);
+  }
+
+  const kcal = (met * 3.5 * weightKg) / 200 * durationMin;
+  // 四捨五入到 1 位小數
+  return Math.round(kcal * 10) / 10;
+}
+
+/** 供 UI 下拉選單使用 */
+export const activityOptions: Array<{
+  key: ActivityKey;
+  label: string;
+  category: string;
+}> = Object.entries(MET_TABLE).map(([key, v]) => ({
+  key: key as ActivityKey,
+  label: v.label,
+  category: v.category
+}));
