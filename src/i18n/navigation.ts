@@ -1,5 +1,11 @@
-import {createNavigation} from 'next-intl/navigation';
+// src/i18n/navigation.ts
+import {createSharedPathnamesNavigation} from 'next-intl/navigation';
 import {routing} from './routing';
 
-export const {Link, redirect, usePathname, useRouter, getPathname} =
-  createNavigation(routing);
+// 匯出 Link / useRouter / usePathname… 供 Header / SideNav 使用
+export const {
+  Link,
+  usePathname,
+  useRouter,
+  getPathname
+} = createSharedPathnamesNavigation(routing);
