@@ -2,8 +2,17 @@
 import {defineRouting} from 'next-intl/routing';
 
 export const routing = defineRouting({
-  // 你的語言清單
   locales: ['en', 'zh-Hant'],
-  // 預設語言
-  defaultLocale: 'en'
+  defaultLocale: 'zh-Hant',
+  // 兩語系都帶前綴，像 /en /zh-Hant
+  localePrefix: 'always',
+  pathnames: {
+    '/': '/',
+    '/auth/sign-in': '/auth/sign-in',
+    '/profile': '/profile',
+    '/log/meal': '/log/meal',
+    '/log/workout': '/log/workout',
+    '/library/videos': '/library/videos',
+    '/library/recipes': '/library/recipes'
+  }
 });
